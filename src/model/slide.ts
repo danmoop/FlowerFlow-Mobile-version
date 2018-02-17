@@ -1,4 +1,4 @@
-export class Presentation
+export class _Slide
 {
     constructor(info: string)
     {
