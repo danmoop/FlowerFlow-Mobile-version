@@ -63,3 +63,14 @@
 	.button{
 		padding: 15px;
 	}
+
+	.width-100{
+		width: 100%;
+	}
+
+	.project-box-danger{
+		background: transparent;
+		border: 2px solid #E74C3C;
+		font-size: 20px;
+		margin-top: 10px;
+	}

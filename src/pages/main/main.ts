@@ -14,6 +14,7 @@ import { Storage } from '@ionic/storage';
 
 export class MainPage 
 {
+
 	private allProjects: JSON;
 
 	constructor(public navCtrl: NavController, public navParams: NavParams) 
@@ -40,5 +41,7 @@ export class MainPage
 		projects.push(presentation);
 		
 		window.localStorage.setItem("allProjects", JSON.stringify(projects));
+
+		this.allProjects = JSON.parse(window.localStorage.getItem("allProjects"));
 	}
 }
