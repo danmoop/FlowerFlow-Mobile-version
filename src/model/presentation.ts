@@ -9,7 +9,9 @@ export class Presentation
 
     constructor(title: string, description: string, slides: Array<_Slide>)
     {
-        new Presentation(title, description, slides);
+        this.projectTitle = title;
+        this.projectDescription = description;
+        this.projectSlides = slides;
     }
 
     getProjectTitle()

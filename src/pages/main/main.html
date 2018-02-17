@@ -2,6 +2,8 @@
     
 <div class="text-center">
     <h2 class="b wh">All projects</h2>
+    <h2 *ngIf="allProjects == null" class="b wh">You have no projects yet</h2>
+    <h2 *ngFor="let project of allProjects" class="b wh">{{ project.projectTitle }}</h2>
 </div>
 
 <hr style="background: white;">
@@ -9,7 +11,7 @@
 <div class="text-center">
     <button class="b wh btn btn-primary button">Create a new project</button>
     <button class="b wh btn btn-danger button">Start from template</button>
-    <button class="b wh btn btn-info button">Open a new project</button>
+    <button class="b wh btn btn-info button" (click)="savePr();">Save</button>
 </div>
 
 </ion-content>
