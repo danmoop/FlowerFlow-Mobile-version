@@ -34,6 +34,11 @@ export class MainPage
 	
 	savePr()
 	{
+		if(this.allProjects == null)
+		{
+			window.localStorage.setItem("allProjects", JSON.stringify(new Array()));
+		}
+
 		let projects = JSON.parse(window.localStorage.getItem("allProjects"));
 
 		let presentation = new Presentation("titl", "desc", new Array<_Slide>());
@@ -43,5 +48,11 @@ export class MainPage
 		window.localStorage.setItem("allProjects", JSON.stringify(projects));
 
 		this.allProjects = JSON.parse(window.localStorage.getItem("allProjects"));
+	}
+
+	clearStorage()
+	{
+		this.allProjects = null;
+		window.localStorage.clear();
 	}
 }
