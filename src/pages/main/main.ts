@@ -5,6 +5,7 @@ import { Presentation } from '../../model/presentation';
 import { _Slide } from '../../model/slide';
 import { AlertController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
+import { EditorPage } from '../editor/editor';
 
 @IonicPage()
 @Component({
@@ -17,7 +18,7 @@ export class MainPage
 
 	private allProjects: JSON;
 
-	constructor(public navCtrl: NavController, public navParams: NavParams) 
+	constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) 
 	{
 		this.allProjects = JSON.parse(window.localStorage.getItem("allProjects"));
 
@@ -52,7 +53,38 @@ export class MainPage
 
 	clearStorage()
 	{
-		this.allProjects = null;
-		window.localStorage.clear();
+		/*this.allProjects = null;
+		window.localStorage.clear();*/
+
+		let alert = this.alertCtrl.create({
+			title: 'Confirm delete',
+			message: 'Do you want to delete this project?',
+			buttons: [
+			  {
+				text: 'Yes',
+				role: 'cancel',
+				handler: () => {
+					this.alertCtrl.create({
+						title: 'Projects deleted',
+						buttons: ['Ok']
+					}).present();
+
+					this.allProjects = null;
+					window.localStorage.clear();
+				}
+			  },
+			  {
+				text: 'No',
+				handler: () => {
+				}
+			  }
+			]
+		  });
+		  alert.present();
+	}
+
+	createProject()
+	{
+		this.navCtrl.push(EditorPage);
 	}
 }

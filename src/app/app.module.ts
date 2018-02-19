@@ -7,13 +7,15 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { MainPage } from '../pages/main/main';
+import { EditorPage } from '../pages/editor/editor';
 import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    MainPage
+    MainPage,
+    EditorPage
   ],
   imports: [
     BrowserModule,
@@ -24,7 +26,8 @@ import { IonicStorageModule } from '@ionic/storage';
   entryComponents: [
     MyApp,
     HomePage,
-    MainPage
+    MainPage,
+    EditorPage
   ],
   providers: [
     StatusBar,
