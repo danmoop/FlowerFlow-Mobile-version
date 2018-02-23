@@ -8,6 +8,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { MainPage } from '../pages/main/main';
 import { EditorPage } from '../pages/editor/editor';
+import { EditorSettingsPage } from '../pages/editor-settings/editor-settings';
 import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
@@ -15,7 +16,8 @@ import { IonicStorageModule } from '@ionic/storage';
     MyApp,
     HomePage,
     MainPage,
-    EditorPage
+    EditorPage,
+    EditorSettingsPage
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,8 @@ import { IonicStorageModule } from '@ionic/storage';
     MyApp,
     HomePage,
     MainPage,
-    EditorPage
+    EditorPage,
+    EditorSettingsPage
   ],
   providers: [
     StatusBar,

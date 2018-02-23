@@ -6,6 +6,7 @@ import { _Slide } from '../../model/slide';
 import { AlertController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { EditorPage } from '../editor/editor';
+import { EditorSettingsPage } from '../editor-settings/editor-settings';
 
 @IonicPage()
 @Component({
@@ -85,6 +86,6 @@ export class MainPage
 
 	createProject()
 	{
-		this.navCtrl.push(EditorPage);
+		this.navCtrl.push(EditorSettingsPage);
 	}
 }
