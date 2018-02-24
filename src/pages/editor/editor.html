@@ -1,13 +1,18 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Editor</ion-title>
+    <ion-title><span [innerHTML]="editorHeader">Editor</span></ion-title>
   </ion-navbar>
 
 </ion-header>
 
 <ion-content padding>
-  <div id="editor">
-    <p>Welcome to editor!</p>
-  </div>
+  
+    <div class="text-center">
+        <h4>Slides</h4>
+        <div class="scrollmenu" id="slides">
+            <button id="addSlide_Btn" class="btn btn-danger"><i class="fas fa-plus-square fa-2x"></i></button>
+        </div>
+    </div>
+
 </ion-content>

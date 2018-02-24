@@ -1,11 +1,3 @@
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>EditorSettings</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
 
 <ion-content padding>
     <div class="container text-center">
@@ -13,13 +5,13 @@
         <hr>
           <div class="form-group has-error" style="margin: 20px;">
     
-          <input class="form-control input-hg" type="text" placeholder="Presentation title" />
+          <input id="title" class="form-control input-hg" type="text" placeholder="Presentation title" />
         </div>
     <div class="form-group has-success" style="margin: 20px;">
-        <input class="form-control input-hg" type="text" placeholder="Presentation description" />
+        <input id="desc" class="form-control input-hg" type="text" placeholder="Presentation description" />
     </div>
-
-    <button type="button" class="btn b margin-btn">Create</button>
+    <br>
+    <button type="button" class="btn b margin-btn" (click)="editSettings();">Create</button>
 
     </div>
 

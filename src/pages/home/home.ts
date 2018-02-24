@@ -11,7 +11,9 @@ import { MainPage } from '../main/main';
 
 export class HomePage {
 
-	constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
+	constructor(public navCtrl: NavController, public alertCtrl: AlertController) 
+	{
+		window.localStorage.setItem("editorProject", "{}");
   	}
 
   	openMain()
