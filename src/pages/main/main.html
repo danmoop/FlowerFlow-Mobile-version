@@ -11,7 +11,7 @@
 <div class="text-center">
     <h2 class="b wh">All projects</h2>
     <h2 *ngIf="allProjects == null" class="b wh">You have no projects yet</h2>
-    <button *ngFor="let project of allProjects" class="b btn btn-danger width-100 project-box-danger" (click)="clearStorage();">{{ project.projectTitle }}</button>
+    <button *ngFor="let project of allProjects" class="b btn btn-danger width-100 project-box-danger" (press)="deleteProject(project);" (click)="openProjectPage(project);">{{ project.projectTitle }}</button>
 </div>
 
 

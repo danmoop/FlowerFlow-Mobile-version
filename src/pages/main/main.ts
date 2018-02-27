@@ -21,6 +21,8 @@ export class MainPage
 
 	constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) 
 	{
+		window.localStorage.setItem("editorProject", "{}");
+
 		this.allProjects = JSON.parse(window.localStorage.getItem("allProjects"));
 
 		if(this.allProjects == null)
@@ -56,7 +58,15 @@ export class MainPage
 	{
 		/*this.allProjects = null;
 		window.localStorage.clear();*/
+	}
 
+	createProject()
+	{
+		this.navCtrl.push(EditorSettingsPage);
+	}
+
+	deleteProject(project)
+	{
 		let alert = this.alertCtrl.create({
 			title: 'Confirm delete',
 			message: 'Do you want to delete this project?',
@@ -66,12 +76,26 @@ export class MainPage
 				role: 'cancel',
 				handler: () => {
 					this.alertCtrl.create({
-						title: 'Projects deleted',
+						title: 'Project deleted',
 						buttons: ['Ok']
 					}).present();
+					
+					let _allProjects = JSON.parse(window.localStorage.getItem('allProjects'));
 
-					this.allProjects = null;
-					window.localStorage.clear();
+					for(var i = 0; i < _allProjects.length; i++)
+					{
+						if(project.projectTitle == _allProjects[i].projectTitle)
+						{
+							console.log(project.projectTitle == _allProjects[i].projectTitle);
+
+							_allProjects.splice(i, 1);
+							
+
+							window.localStorage.setItem('allProjects', JSON.stringify(_allProjects));
+						
+							this.allProjects = _allProjects;
+						}
+					}
 				}
 			  },
 			  {
@@ -84,8 +108,8 @@ export class MainPage
 		  alert.present();
 	}
 
-	createProject()
+	openProjectPage(project)
 	{
-		this.navCtrl.push(EditorSettingsPage);
+		console.log(project);
 	}
 }
