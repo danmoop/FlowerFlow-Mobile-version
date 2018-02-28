@@ -1,17 +1,19 @@
 
 <ion-content padding>
-    <div class="container text-center">
+    <div class="container text-center" style="position:initial;">
         <h2>Presentation settings</h2>
         <hr>
-          <div class="form-group has-error" style="margin: 20px;">
-    
+
+        <div class="form-group has-error" style="margin: 20px;">
           <input id="title" class="form-control input-hg" type="text" placeholder="Presentation title" />
         </div>
-    <div class="form-group has-success" style="margin: 20px;">
-        <input id="desc" class="form-control input-hg" type="text" placeholder="Presentation description" />
-    </div>
-    <br>
-    <button type="button" class="btn b margin-btn" (click)="editSettings();">Create</button>
+
+        <div class="form-group has-success" style="margin: 20px;">
+            <input id="desc" class="form-control input-hg" type="text" placeholder="Presentation description" />
+        </div>
+
+        <br>
+        <button type="button" class="btn b" (click)="editSettings();">Create</button>
 
     </div>
 

@@ -110,6 +110,7 @@ export class MainPage
 
 	openProjectPage(project)
 	{
-		console.log(project);
+		window.localStorage.setItem('editorProject', JSON.stringify(project));
+		this.navCtrl.push(EditorPage);
 	}
 }

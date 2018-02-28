@@ -1,7 +1,9 @@
 export class _Slide
 {
-    constructor(info: string)
+    private name: string;
+
+    constructor(name: string)
     {
-        console.log(info);
+        this.name = name;
     }
 }
