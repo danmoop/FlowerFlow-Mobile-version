@@ -10,3 +10,6 @@ Make sure you have [ionic](https://ionicframework.com/) installed on your PC. Un
 ![img](gallery/11.png)
 ![img](gallery/22.png)
 ![img](gallery/33.png)
+![img](gallery/55.png)
+![img](gallery/66.png)
+![img](gallery/77.png)
