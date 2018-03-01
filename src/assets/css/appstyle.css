@@ -16,6 +16,10 @@
 		color: white;
 	}
 
+	.bl{
+		color: black;
+	}
+
 	p{
 		font-size: 20px;
 	}
@@ -73,4 +77,16 @@
 		border: 2px solid #E74C3C;
 		font-size: 20px;
 		margin-top: 10px;
+	}
+
+	.project-box-primary{
+		background: transparent;
+		border: 2px solid rgba(26,188,156 ,1);
+		font-size: 20px;
+		margin-top: 10px;
+	}
+
+	.spaces{
+		margin-left: 5px;
+		margin-right: 5px;
 	}
