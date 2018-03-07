@@ -11,7 +11,7 @@
     <div class="text-center">
         <h4>Slides</h4>
 
-        <button *ngFor="let slide of _projectSlides" class="b btn btn-primary bl project-box-primary spaces">{{ slide.name }}</button>
+        <button *ngFor="let slide of _projectSlides" class="b btn btn-primary bl project-box-primary spaces" (click)="openSlideEditor(slide);">{{ slide.name }}</button>
         
         <hr>
         <div class="scrollmenu" id="slides">

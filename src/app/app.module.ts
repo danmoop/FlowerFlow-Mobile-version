@@ -10,6 +10,7 @@ import { HomePage } from '../pages/home/home';
 import { MainPage } from '../pages/main/main';
 import { EditorPage } from '../pages/editor/editor';
 import { EditorSettingsPage } from '../pages/editor-settings/editor-settings';
+import { SlideEditorPage } from '../pages/slide-editor/slide-editor';
 import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
@@ -18,7 +19,8 @@ import { IonicStorageModule } from '@ionic/storage';
     HomePage,
     MainPage,
     EditorPage,
-    EditorSettingsPage
+    EditorSettingsPage,
+    SlideEditorPage
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import { IonicStorageModule } from '@ionic/storage';
     HomePage,
     MainPage,
     EditorPage,
-    EditorSettingsPage
+    EditorSettingsPage,
+    SlideEditorPage
   ],
   providers: [
     StatusBar,

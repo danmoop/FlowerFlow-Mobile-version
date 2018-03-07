@@ -2,9 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController, Slide } from 'ionic-angular';
 import { Presentation } from '../../model/presentation';
 import { EditorSettingsPage } from '../editor-settings/editor-settings';
+import { SlideEditorPage } from '../slide-editor/slide-editor';
 import { _Slide } from './../../model/slide';
-
-declare var Quill: any;
 
 @IonicPage()
 @Component({
@@ -40,45 +39,6 @@ export class EditorPage
     ionViewDidLoad() 
     {
         console.log('ionViewDidLoad EditorPage');
-    }
-
-    displayEditor()
-    {
-        var toolbarOptions = [
-            ['bold', 'italic', 'underline', 'strike'],        
-            ['blockquote', 'code-block'],
-            [{ 'header': 1 }, { 'header': 2 }],             
-            [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-            [{ 'script': 'sub'}, { 'script': 'super' }],     
-            [{ 'indent': '-1'}, { 'indent': '+1' }],        
-            [{ 'direction': 'rtl' }],                         
-            [{ 'size': ['small', false, 'large', 'huge'] }],  
-            [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-            [{ 'color': [] }, { 'background': [] }],          
-            [{ 'font': [] }],
-            [{ 'align': [] }],
-            ['clean']
-        ];
-
-        var quill = new Quill('#editor', 
-        {
-            modules: 
-            {
-            toolbar: toolbarOptions
-            },
-            theme: 'snow'
-        });
-        
-
-        /*
-            HTML Editor code:
-            
-            <div id="editor">
-                <p>Welcome to editor!</p>
-            </div>
-        
-        */
-
     }
 
     addSlide()
@@ -121,5 +81,12 @@ export class EditorPage
               }
             ]
           }).present();
+    }
+
+    openSlideEditor(slide)
+    {
+        window.localStorage.setItem('slideObject', JSON.stringify(slide));
+
+        this.navCtrl.push(SlideEditorPage);
     }
 }

@@ -22,6 +22,7 @@ export class MainPage
 	constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) 
 	{
 		window.localStorage.setItem("editorProject", "{}");
+		window.localStorage.setItem("slideObject", "{}");
 
 		this.allProjects = JSON.parse(window.localStorage.getItem("allProjects"));
 
